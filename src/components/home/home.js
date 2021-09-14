@@ -31,7 +31,7 @@ export const Home = () => {
 
                 {
                     stocks.map((stock) => {
-                        return <li key={stock.symbol}>{stock.symbol} {stock.open} {stock.volume}<button >Add to watchlist</button></li>
+                        return <li key={stock.symbol}>{stock.symbol} Open:{stock.open} Volume:{stock.volume}<button >Add to watchlist</button></li>
                     })
                 }
 
