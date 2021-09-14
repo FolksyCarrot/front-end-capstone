@@ -9,10 +9,11 @@ export const StockForm = () => {
     const {symbol} = useParams()
 
     const reRender = () => {
-        fetch (`http://api.marketstack.com/v1/eod?access_key=7932502e72211a0b7cec01fa7a53f0e3&symbols=${symbol}&limit=1`)
+        fetch (`http://localhost:8088/data/${symbol}`)
             .then ( res => res.json())
             .then ((data)=> {
-                setStocks(data.data)
+                setStocks(data)
+                console.log(stocks)
                 
             })
     }

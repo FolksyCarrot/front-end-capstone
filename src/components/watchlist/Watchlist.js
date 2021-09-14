@@ -7,7 +7,7 @@ export const Watchlist = () => {
     const [list, setList]= useState([])
     const [id, setId] = useState(null)
     const history= useHistory()
-    
+
     useEffect( 
         () => {
             fetch("http://localhost:8088/watchlist")
@@ -35,7 +35,7 @@ export const Watchlist = () => {
             <h1>Watchlist</h1>
                 <ul>
                     {
-                        list.map((watchlist) => <li><h2>{watchlist.stockSymbol}</h2> {watchlist.stockOpen} {watchlist.stockClose} {watchlist.stockVolume}{watchlist.notes}<button id={watchlist.id} onClick={(evt) =>history.push(`/watchlist/${parseInt(evt.target.id)}`)}>Edit</button><button>delete</button></li>)
+                        list.map((watchlist) => <li><h2>{watchlist.stockSymbol}</h2> <h4>Open: {watchlist.stockOpen}</h4> <h4>Close: {watchlist.stockClose}</h4> <h4>Volume: {watchlist.stockVolume}</h4>{watchlist.notes}<button id={watchlist.id} onClick={(evt) =>history.push(`/watchlist/${parseInt(evt.target.id)}`)}>Edit</button><button>delete</button></li>)
                     }
                 </ul>
         
