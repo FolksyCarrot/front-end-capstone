@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-import "./Login.css"
+// import "./Login.css"
 
 export const Register = (props) => {
     const [customer, setCustomer] = useState({})
