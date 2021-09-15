@@ -2,7 +2,7 @@
     font-size: 2.5rem;
     color: white;
 }
-body {
+.login--body {
     background-image: url("https://augustafreepress.com/wp-content/uploads/2019/09/Investments.jpg");
     background-size: cover;
 }
