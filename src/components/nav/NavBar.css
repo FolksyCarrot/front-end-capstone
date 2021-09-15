@@ -1,0 +1,13 @@
+.navbar {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: left;
+}
+
+.navbar__item {
+    border: 2px black solid;
+    flex-basis: 20%;
+    list-style-type: none;
+    
+}
+
