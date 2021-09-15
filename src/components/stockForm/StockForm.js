@@ -3,17 +3,17 @@ import { useHistory, useParams } from "react-router-dom";
 
 export const StockForm = () => {
 
-    const [stocks, setStocks] = useState([])
+    const [stocks, setStocks] = useState({})
     const [notes, update] = useState()
     const history = useHistory()
     const {symbol} = useParams()
 
     const reRender = () => {
-        fetch (`http://localhost:8088/data/${symbol}`)
+        fetch (`http://localhost:8088/data?symbol=${symbol}`)
             .then ( res => res.json())
             .then ((data)=> {
-                setStocks(data)
-                console.log(stocks)
+                setStocks(data[0])
+                
                 
             })
     }
@@ -22,7 +22,7 @@ export const StockForm = () => {
     useEffect(
         () => {
            reRender()
-          
+           console.log(stocks)
         },
         []
     )
@@ -32,10 +32,10 @@ export const StockForm = () => {
 
         const stockObject = {
             userId: parseInt(localStorage.getItem("stock_customer")),
-            stockSymbol: stocks[0].symbol,
-            stockOpen: stocks[0].open,
-            stockClose: stocks[0].close,
-            stockVolume: stocks[0].volume,
+            stockSymbol: stocks.symbol,
+            stockOpen: stocks.open,
+            stockClose: stocks.close,
+            stockVolume: stocks.volume,
             notes: notes.notes
         }
 
@@ -58,9 +58,9 @@ export const StockForm = () => {
         
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>
-            {
-                stocks.map((stock) =><><h2>{stock.symbol}</h2><div>Open:{stock.open}</div><div>Close:{stock.close}</div><div>Volume:{stock.volume}</div></>)
-            }
+            
+               <h2>{stocks.symbol}</h2><div>Open:{stocks.open}</div><div>Close:{stocks.close}</div><div>Volume:{stocks.volume}</div>
+            
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="description">Notes:</label>
