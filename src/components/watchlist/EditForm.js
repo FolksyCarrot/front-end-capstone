@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, useParams } from "react-router-dom";
 
-export const StockForm = () => {
+export const EditForm = () => {
 
-    const [stocks, setStocks] = useState({})
+    const [watchlist, setWatchlist] = useState([])
     const [notes, update] = useState()
     const history = useHistory()
-    const {symbol} = useParams()
+    const {watchlistId} = useParams()
 
     const reRender = () => {
-        fetch (`http://localhost:8088/data?symbol=${symbol}`)
+       return fetch (`http://localhost:8088/watchlist/${watchlistId}`)
             .then ( res => res.json())
             .then ((data)=> {
-                setStocks(data[0])
-                
-                
+                setWatchlist(data)
+                console.log(data)
             })
     }
 
@@ -22,7 +21,7 @@ export const StockForm = () => {
     useEffect(
         () => {
            reRender()
-           console.log(stocks)
+          
         },
         []
     )
@@ -32,35 +31,35 @@ export const StockForm = () => {
 
         const stockObject = {
             userId: parseInt(localStorage.getItem("stock_customer")),
-            stockSymbol: stocks.symbol,
-            stockOpen: stocks.open,
-            stockClose: stocks.close,
-            stockVolume: stocks.volume,
+            stockSymbol: watchlist.stockSymbol,
+            stockOpen: watchlist.stockOpen,
+            stockClose: watchlist.stockClose,
+            stockVolume: watchlist.stockVolume,
             notes: notes.notes
         }
-
-
-        const fetchOption = {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json"
-            },
-            body: JSON.stringify(stockObject)
-        }
-        
-        return fetch("http://localhost:8088/watchlist", fetchOption)
-            .then(() => history.push("/home"))
-    }
     
+
+       fetch(`http://localhost:8088/watchlist/${watchlistId}`,  {
+           method: "PUT",
+           headers: {
+               "Content-Type": "application/json"
+           },
+           body: JSON.stringify(stockObject)
+       })
+           .then(() => {history.push("/watchlist")})
+    }
+
+   
     return (
         <>
            
         
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>
-            
-               <h2>{stocks.symbol}</h2><div>Open:{stocks.open}</div><div>Close:{stocks.close}</div><div>Volume:{stocks.volume}</div>
-            
+            <h2>{watchlist.stockSymbol}</h2>
+            <h4>Open:{watchlist.stockOpen}</h4>
+            <h4>Close:{watchlist.stockClose}</h4>
+            <h4>Volume:{watchlist.stockVolume}</h4>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="description">Notes:</label>
@@ -68,7 +67,7 @@ export const StockForm = () => {
                         required= {true} autoFocus={true}
                         type="text"
                         className="form-control"
-                        placeholder="Notes of Stock"
+                        placeholder="notes"
                         onChange= {
                             (event) => {
                                 const copy = {...notes}
