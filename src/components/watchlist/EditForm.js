@@ -57,9 +57,9 @@ export const EditForm = () => {
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>
             <h2>{watchlist.stockSymbol}</h2>
-            <h4>Open:{watchlist.stockOpen}</h4>
-            <h4>Close:{watchlist.stockClose}</h4>
-            <h4>Volume:{watchlist.stockVolume}</h4>
+            <h4>Open: {watchlist.stockOpen}</h4>
+            <h4>Close: {watchlist.stockClose}</h4>
+            <h4>Volume: {watchlist.stockVolume}</h4>
             <fieldset>
                 <div className="form-group">
                     <label htmlFor="description">Notes:</label>
@@ -67,7 +67,7 @@ export const EditForm = () => {
                         required= {true} autoFocus={true}
                         type="text"
                         className="form-control"
-                        placeholder="notes"
+                        defaultValue={watchlist.notes}
                         onChange= {
                             (event) => {
                                 const copy = {...notes}
@@ -75,7 +75,7 @@ export const EditForm = () => {
                                 update(copy)
                             }
 
-                        } />
+                        } ></textarea>
                 </div>
             </fieldset>
             <button className="btn btn-primary" onClick={submitForm}>
