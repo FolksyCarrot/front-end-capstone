@@ -59,7 +59,7 @@ export const StockForm = () => {
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>
             
-               <h2>{stocks.symbol}</h2><div>Open:{stocks.open}</div><div>Close:{stocks.close}</div><div>Volume:{stocks.volume}</div>
+               <h2>{stocks.symbol}</h2><div>Open: {stocks.open}</div><div>Close: {stocks.close}</div><div>Volume: {stocks.volume}</div>
             
             <fieldset>
                 <div className="form-group">
