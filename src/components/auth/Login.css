@@ -5,6 +5,7 @@
 .login--body {
     background-image: url("https://augustafreepress.com/wp-content/uploads/2019/09/Investments.jpg");
     background-size: cover;
+    height: 881px
 }
 
 label, h2 {
@@ -77,5 +78,6 @@ fieldset {
 .link--register {
     background-color: white;
     width: 100px;
+    margin: auto;
 }
 
