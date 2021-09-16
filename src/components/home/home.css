@@ -9,9 +9,16 @@
     text-align: center;
     margin: 0.5em 0;
     max-height: 100%;
-    width: 30%;
+    width: 35%;
   }
 
   .stock--list {
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      margin: 20px;
+  }
+
+  .modal:hover {
+      background-color: green;
   }

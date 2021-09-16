@@ -29,17 +29,17 @@ export const Home = () => {
         <>
             <h1> Soaring Stocks</h1>
            
-                <ul>
+                <div className="stock--list">
 
                 {
                     stocks.map((stock) => {
                         
-                        return <div className="stock--list" ><li className="modal" key={stock.symbol}><h2>{stock.name}</h2><h3>Ticker: {stock.symbol}</h3> <h5>Open: {stock.open}</h5> <h5> Close: {stock.close}</h5> <h5>Volume: {stock.volume}</h5><button onClick={() => history.push(`/stockform/${stock.symbol}`)} >Add to watchlist</button></li></div>
+                        return <div className="modal" key={stock.symbol}><h2>{stock.name}</h2><h3>Ticker: {stock.symbol}</h3> <h5>Open: {stock.open}</h5> <h5> Close: {stock.close}</h5> <h5>Volume: {stock.volume}</h5><button onClick={() => history.push(`/stockform/${stock.symbol}`)} >Add to watchlist</button></div>
                         
                     })
                 }
 
-                </ul>
+                </div>
         
         </>
     )
