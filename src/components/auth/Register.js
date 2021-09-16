@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react"
 import { useHistory } from "react-router-dom"
-// import "./Login.css"
+import "./Login.css"
 
 export const Register = (props) => {
     const [customer, setCustomer] = useState({})
@@ -47,14 +47,14 @@ export const Register = (props) => {
 
 
     return (
-        <main style={{ textAlign: "center" }}>
+        <main className="register--main"style={{ textAlign: "center" }}>
             <dialog className="dialog dialog--password" ref={conflictDialog}>
                 <div>Account with that email address already exists</div>
                 <button className="button--close" onClick={e => conflictDialog.current.close()}>Close</button>
             </dialog>
 
             <form className="form--login" onSubmit={handleRegister}>
-                <h1 className="h3 mb-3 font-weight-normal">Please Register for Honey Rae Repairs</h1>
+                <h1 className="h3 mb-3 font-weight-normal">Please Register</h1>
                 <fieldset>
                     <label htmlFor="name"> Full Name </label>
                     <input onChange={updateCustomer}

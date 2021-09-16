@@ -82,3 +82,8 @@ fieldset {
     margin: 15%;
 }
 
+.register--main {
+    background-image: url("../images/background2.png");
+    background-size: cover;
+    height: 881px;
+}
