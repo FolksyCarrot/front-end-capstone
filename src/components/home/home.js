@@ -1,6 +1,8 @@
 import React, { useEffect, useState} from "react"
 import { useHistory } from "react-router-dom";
 import "./home.css"
+import stockHome from "../images/stock-home-page.jpg"
+
 
 export const Home = () => {
 
@@ -28,7 +30,7 @@ export const Home = () => {
     return (
         <>
             <div className="home--heading"><h1> Soaring Stocks</h1></div>
-                <div className="home--picture"><img src="../images/stock-home-page.jpg" alt="picture" /></div>
+                <div className="home--picture"><img src={stockHome} alt="picture" /></div>
            
                 <div className="stock--list">
 
