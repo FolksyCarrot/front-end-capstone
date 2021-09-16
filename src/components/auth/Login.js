@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
 import { Link } from "react-router-dom";
 import { useHistory } from "react-router-dom"
-// import "./Login.css"
+import "./Login.css"
 
 export const Login = () => {
     const [email, set] = useState("")
@@ -28,6 +28,7 @@ export const Login = () => {
     }
 
     return (
+        <body className="login--body">
         <main className="container--login">
             <dialog className="dialog dialog--auth" ref={existDialog}>
                 <div>User does not exist</div>
@@ -36,8 +37,8 @@ export const Login = () => {
 
             <section>
                 <form className="form--login" onSubmit={handleLogin}>
-                    <h1>Soaring Stocks</h1>
-                    <h2>Please sign in</h2>
+                    <h1 className="form--heading">Soaring Stocks</h1>
+                    <h2 className="form--heading">Please sign in</h2>
                     <fieldset>
                         <label htmlFor="inputEmail"> Email address </label>
                         <input type="email"
@@ -53,10 +54,11 @@ export const Login = () => {
                     </fieldset>
                 </form>
             </section>
-            <section className="link--register">
-                <Link to="/register">Not a member yet?</Link>
-            </section>
+                <section className="link--register">
+                    <Link to="/register">Not a member yet?</Link>
+                </section>
         </main>
+        </body>
     )
 }
 
