@@ -28,6 +28,7 @@ export const Home = () => {
     return (
         <>
             <div className="home--heading"><h1> Soaring Stocks</h1></div>
+                <div className="home--picture"><img src="../images/stock-home-page.jpg" alt="picture" /></div>
            
                 <div className="stock--list">
 
