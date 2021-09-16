@@ -27,7 +27,7 @@ export const Home = () => {
 
     return (
         <>
-            <h1> Soaring Stocks</h1>
+            <div className="home--heading"><h1> Soaring Stocks</h1></div>
            
                 <div className="stock--list">
 

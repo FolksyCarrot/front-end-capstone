@@ -22,3 +22,8 @@
   .modal:hover {
       background-color: green;
   }
+
+  .home--heading {
+      display:flex;
+      justify-content: center;
+  }
