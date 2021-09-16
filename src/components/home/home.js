@@ -1,5 +1,6 @@
 import React, { useEffect, useState} from "react"
 import { useHistory } from "react-router-dom";
+import "./home.css"
 
 export const Home = () => {
 
@@ -26,22 +27,25 @@ export const Home = () => {
 
     return (
         <>
-            <h1> Soaring Stocks</h1>
+            <div className="home--heading"><h1> Soaring Stocks</h1></div>
+                <div className="home--picture"><img src="../images/stock-home-page.jpg" alt="picture" /></div>
            
-                <ul>
+                <div className="stock--list">
 
                 {
                     stocks.map((stock) => {
                         
-                        return <li key={stock.symbol}><h2>{stock.name}</h2><h3>Ticker: {stock.symbol}</h3> <h5>Open: {stock.open}</h5> <h5> Close: {stock.close}</h5> <h5>Volume: {stock.volume}</h5><button onClick={() => history.push(`/stockform/${stock.symbol}`)} >Add to watchlist</button></li>
+                        return <div className="modal" key={stock.symbol}><h2>{stock.name}</h2><h3>Ticker: {stock.symbol}</h3> <h5>Open: {stock.open}</h5> <h5> Close: {stock.close}</h5> <h5>Volume: {stock.volume}</h5><button onClick={() => history.push(`/stockform/${stock.symbol}`)} >Add to watchlist</button></div>
                         
                     })
                 }
 
-                </ul>
+                </div>
         
         </>
     )
 }
 
 // http://api.marketstack.com/v1/eod?access_key=7932502e72211a0b7cec01fa7a53f0e3&symbols=AAPL,MSFT,BA,C,JPM,PFE,DIS,GM,QCOM,CAT,WFC,IBM,NVDA,LMT,SNAP,SBUX,AMD,BABA,SNAP,TSLA,BAC&limit=20
+
+//added div of modaul to the return statement
