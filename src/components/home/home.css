@@ -1,0 +1,17 @@
+.modal {
+    top: 5em;
+    left: 10em;
+    right: 10em;
+    bottom: 25em;
+    background-color: rgb(243, 243, 226);
+    box-shadow: 5px 15px 20px rgba(72, 62, 23, 0.4);
+    border-radius: 0.5em;
+    text-align: center;
+    margin: 0.5em 0;
+    max-height: 100%;
+    width: 30%;
+  }
+
+  .stock--list {
+      display: flex;
+  }
