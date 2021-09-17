@@ -29,6 +29,7 @@ export const Home = () => {
 
     return (
         <>
+            <main className="main--container">
             <div className="home--heading"><h1> Soaring Stocks</h1></div>
                 <div className="home--picture"><img src={stockHome} alt="picture" /></div>
            
@@ -36,13 +37,14 @@ export const Home = () => {
 
                 {
                     stocks.map((stock) => {
-                        
-                        return <div className="modal" key={stock.symbol}><h2>{stock.name}</h2><h3>Ticker: {stock.symbol}</h3> <h5>Open: {stock.open}</h5> <h5> Close: {stock.close}</h5> <h5>Volume: {stock.volume}</h5><button onClick={() => history.push(`/stockform/${stock.symbol}`)} >Add to watchlist</button></div>
+                        console.log(stock.open-stock.close)
+                        return <div className={stock.open-stock.close> 0 ? "positive" : "negative" } key={stock.symbol}><h2>{stock.name}</h2><h3>Ticker: {stock.symbol}</h3> <h5>Open: {stock.open}</h5> <h5> Close: {stock.close}</h5> <h5>Volume: {stock.volume}</h5><h5>Change: {(stock.open -stock.close).toFixed(2)}</h5><button onClick={() => history.push(`/stockform/${stock.symbol}`)} >Add to watchlist</button></div>
                         
                     })
                 }
 
                 </div>
+            </main>
         
         </>
     )
