@@ -38,7 +38,7 @@
   }
 
   .negative:hover {
-      background-color: red;
+      background-color: rgba(255, 56, 0, 1);
   }
 
   .home--heading {
