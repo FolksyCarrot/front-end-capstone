@@ -1,4 +1,18 @@
-.modal {
+.positive {
+    top: 5em;
+    left: 10em;
+    right: 10em;
+    bottom: 25em;
+    background-color: rgb(243, 243, 226);
+    box-shadow: 5px 15px 20px rgba(72, 62, 23, 0.4);
+    border-radius: 0.5em;
+    text-align: center;
+    margin: 0.5em 0;
+    max-height: 100%;
+    width: 35%;
+  }
+
+  .negative {
     top: 5em;
     left: 10em;
     right: 10em;
@@ -19,8 +33,12 @@
       margin: 20px;
   }
 
-  .modal:hover {
+  .positive:hover {
       background-color: green;
+  }
+
+  .negative:hover {
+      background-color: red;
   }
 
   .home--heading {
@@ -28,6 +46,12 @@
       justify-content: center;
   }
 
-  /* .home--picture {
-      background-image: url("../images/stock-home-page.jpg");
-  } */
+ .home--picture img {
+     height: 400px;
+     width: 100vw;
+ }
+
+ .main--container {
+     background-image: url("../images/background2.png");
+     background-size: cover;
+ }
