@@ -2,12 +2,26 @@
     display: flex;
     flex-wrap: nowrap;
     justify-content: left;
-}
-
-.navbar__item {
-    border: 2px black solid;
-    flex-basis: 20%;
-    list-style-type: none;
     
 }
 
+.navbar__item {
+    flex-basis: 20%;
+    list-style-type: none;
+    padding: 10px;
+    
+}
+
+.navbar__main {
+    background-color: silver;
+    height: 40px;
+}
+
+.navbar__image {
+    height: 35px;
+    margin-right: 10px;
+}
+
+.navbar__item:hover {
+    background-color: slategray;
+}
