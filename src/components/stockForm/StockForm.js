@@ -36,6 +36,7 @@ export const StockForm = () => {
             stockOpen: stocks.open,
             stockClose: stocks.close,
             stockVolume: stocks.volume,
+            stockPicture: stocks.picture,
             notes: notes.notes
         }
 
@@ -58,7 +59,7 @@ export const StockForm = () => {
         
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>
-            
+                <div><img src={stocks.picture} /></div>
                <h2>{stocks.symbol}</h2><div>Open: {stocks.open}</div><div>Close: {stocks.close}</div><div>Volume: {stocks.volume}</div>
             
             <fieldset>

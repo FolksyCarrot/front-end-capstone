@@ -41,7 +41,7 @@ export const Watchlist = () => {
             <h1>Watchlist</h1>
                 <ul>
                     {
-                        list.map((watchlist) => <li id={watchlist.id}><h2>{watchlist.stockSymbol}</h2> <h4>Open: {watchlist.stockOpen}</h4> <h4>Close: {watchlist.stockClose}</h4> <h4>Volume: {watchlist.stockVolume}</h4>{watchlist.notes}<button id={watchlist.id} onClick={(evt) =>history.push(`/watchlist/${parseInt(evt.target.id)}`)}>Edit</button><button onClick ={(event) => {deleteListItem(event, watchlist.id)}}>delete</button></li>)
+                        list.map((watchlist) => <li id={watchlist.id}><div><img src={watchlist.stockPicture} /></div><h2>{watchlist.stockSymbol}</h2> <h4>Open: {watchlist.stockOpen}</h4> <h4>Close: {watchlist.stockClose}</h4> <h4>Volume: {watchlist.stockVolume}</h4>{watchlist.notes}<button id={watchlist.id} onClick={(evt) =>history.push(`/watchlist/${parseInt(evt.target.id)}`)}>Edit</button><button onClick ={(event) => {deleteListItem(event, watchlist.id)}}>delete</button></li>)
                     }
                 </ul>
         
