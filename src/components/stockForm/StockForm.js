@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, useParams } from "react-router-dom";
+import "./StockForm.css"
 
 export const StockForm = () => {
 
@@ -22,7 +23,6 @@ export const StockForm = () => {
     useEffect(
         () => {
            reRender()
-           console.log(stocks)
         },
         []
     )
@@ -58,8 +58,8 @@ export const StockForm = () => {
            
         
         <form className="stockForm">
-            <h1 className="stockForm__title">Stock Wishlist</h1>
-                <div><img src={stocks.picture} /></div>
+            <div className="stockform--h2"><h1 className="stockForm__title">Stock Wishlist</h1></div>
+                <div><img src={stocks.picture}  className="stockform--image"/></div>
                <h2>{stocks.symbol}</h2><div>Open: {stocks.open}</div><div>Close: {stocks.close}</div><div>Volume: {stocks.volume}</div>
             
             <fieldset>

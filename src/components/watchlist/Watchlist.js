@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useHistory } from "react-router-dom"
-
+import "./Watchlist.css"
 
 export const Watchlist = () => {
 
@@ -38,10 +38,10 @@ export const Watchlist = () => {
 
     return (
         <>
-            <h1>Watchlist</h1>
+            <div className="watchlist--h2"><h1>Watchlist</h1></div>
                 <ul>
                     {
-                        list.map((watchlist) => <li id={watchlist.id}><div><img src={watchlist.stockPicture} /></div><h2>{watchlist.stockSymbol}</h2> <h4>Open: {watchlist.stockOpen}</h4> <h4>Close: {watchlist.stockClose}</h4> <h4>Volume: {watchlist.stockVolume}</h4>{watchlist.notes}<button id={watchlist.id} onClick={(evt) =>history.push(`/watchlist/${parseInt(evt.target.id)}`)}>Edit</button><button onClick ={(event) => {deleteListItem(event, watchlist.id)}}>delete</button></li>)
+                        list.map((watchlist) => <li id={watchlist.id} className="watchlist--item"><div><img src={watchlist.stockPicture} className="watchlist--image"/></div><h2>{watchlist.stockSymbol}</h2> <h4>Open: {watchlist.stockOpen}</h4> <h4>Close: {watchlist.stockClose}</h4> <h4>Volume: {watchlist.stockVolume}</h4>{watchlist.notes}<button id={watchlist.id} onClick={(evt) =>history.push(`/watchlist/${parseInt(evt.target.id)}`)}>Edit</button><button onClick ={(event) => {deleteListItem(event, watchlist.id)}}>delete</button></li>)
                     }
                 </ul>
         

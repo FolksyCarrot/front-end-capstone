@@ -52,7 +52,6 @@ export const EditForm = () => {
    
     return (
         <>
-           {console.log(watchlist)}
         
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>

@@ -1,0 +1,12 @@
+.watchlist--image {
+    height: 300px;
+    width: 800px;
+}
+.watchlist--item {
+    list-style-type: none;
+}
+
+.watchlist--h2 {
+    display:flex;
+    justify-content: center;
+}
