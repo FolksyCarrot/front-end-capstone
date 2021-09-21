@@ -20,8 +20,8 @@ export const ApplicationViews = () => {
                 <StockForm />
             </Route>
 
-            <Route exact path="/watchlist/:watchlistId(\d+)">
-                <EditForm />
+            <Route exact path="/watchlist/:watchlistId(\d+)" >
+               <EditForm />
             </Route>
 
         

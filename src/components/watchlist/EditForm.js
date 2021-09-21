@@ -35,6 +35,7 @@ export const EditForm = () => {
             stockOpen: watchlist.stockOpen,
             stockClose: watchlist.stockClose,
             stockVolume: watchlist.stockVolume,
+            stockPicture: watchlist.stockPicture,
             notes: notes.notes
         }
     
@@ -52,7 +53,6 @@ export const EditForm = () => {
    
     return (
         <>
-           
         
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>

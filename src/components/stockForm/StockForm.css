@@ -1,0 +1,14 @@
+.stockform--h2 {
+    display:flex;
+    justify-content: center;
+}
+
+.stockform--image {
+    height: 300px;
+    width: 800px;
+    
+}
+
+.stockForm {
+    margin-left: 40px;
+}
