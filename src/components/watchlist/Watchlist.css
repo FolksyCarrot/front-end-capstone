@@ -4,9 +4,23 @@
 }
 .watchlist--item {
     list-style-type: none;
+    margin-bottom: 40px;
 }
 
 .watchlist--h2 {
     display:flex;
     justify-content: center;
+}
+
+.watchlist--noteContainer {
+    display:flex;
+}
+
+.watchlist--notes {
+    margin-right: 2rem;
+}
+
+.watchlist--noteContainer button {
+    height: 1.5rem;
+    margin-top: 1rem;
 }

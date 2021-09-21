@@ -52,6 +52,11 @@
  }
 
  .main--container {
-     background-image: url("../images/background2.png");
+     background-color: black;
+     /* background-image: url("../images/background2.png"); */
      background-size: cover;
+ }
+
+ .home--h1 {
+     color:white;
  }

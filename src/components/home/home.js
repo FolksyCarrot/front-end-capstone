@@ -9,11 +9,11 @@ export const Home = () => {
     const [stocks, setStocks] = useState([])
     const history = useHistory()
     const reRender = () => {
-        fetch ("http://localhost:8088/data")
+        return fetch ("http://localhost:8088/data")
             .then ( res => res.json())
             .then ((data)=> {
                 setStocks(data)
-                console.log(data)
+                
             })
     }
 
@@ -30,7 +30,7 @@ export const Home = () => {
     return (
         <>
             <main className="main--container">
-            <div className="home--heading"><h1> Soaring Stocks</h1></div>
+            <div className="home--heading"><h1 className="home--h1"> Soaring Stocks</h1></div>
                 <div className="home--picture"><img src={stockHome} alt="picture" /></div>
            
                 <div className="stock--list">
