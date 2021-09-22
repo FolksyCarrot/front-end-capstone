@@ -36,7 +36,6 @@ export const Watchlist = () => {
     }
     
     
-
     return (
         <>
         <main className="watchlist--main">
