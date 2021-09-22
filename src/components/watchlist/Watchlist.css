@@ -5,11 +5,13 @@
 .watchlist--item {
     list-style-type: none;
     margin-bottom: 40px;
+    color:white;
 }
 
 .watchlist--h2 {
     display:flex;
     justify-content: center;
+    color: white;
 }
 
 .watchlist--noteContainer {
@@ -23,4 +25,18 @@
 .watchlist--noteContainer button {
     height: 1.5rem;
     margin-top: 1rem;
+}
+
+.watchlist--main {
+    background-color: black;
+}
+.stockForm {
+    background-color: black;
+    color: white;
+}
+
+.stockForm--main {
+    background-color: black;
+    height:550px;
+    margin-top: -30px;
 }

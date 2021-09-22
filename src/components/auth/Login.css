@@ -83,7 +83,7 @@ fieldset {
 }
 
 .register--main {
-    background-image: url("../images/background2.png");
+    background-color: black;
     background-size: cover;
     height: 881px;
 }

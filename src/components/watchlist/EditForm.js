@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react"
 import { useHistory, useParams } from "react-router-dom";
+import "./Watchlist.css"
 
 export const EditForm = () => {
 
@@ -53,7 +54,7 @@ export const EditForm = () => {
    
     return (
         <>
-        
+        <div className="stockForm--main">
         <form className="stockForm">
             <h1 className="stockForm__title">Stock Wishlist</h1>
             <h2>{watchlist.stockSymbol}</h2>
@@ -82,7 +83,7 @@ export const EditForm = () => {
                 Submit Form
             </button>
         </form>
-
+        </div>
         </>
     )
 }
