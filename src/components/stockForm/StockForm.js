@@ -60,7 +60,7 @@ export const StockForm = () => {
         <form className="stockForm">
             <div className="stockform--h2"><h1 className="stockForm__title">Stock Wishlist</h1></div>
                 <div><img src={stocks.picture}  className="stockform--image"/></div>
-               <h2>{stocks.symbol}</h2><div>Open: {stocks.open}</div><div>Close: {stocks.close}</div><div>Volume: {stocks.volume}</div>
+              <div className="stockform--info"><h2>{stocks.symbol}</h2><div>Open: {stocks.open}</div><div>Close: {stocks.close}</div><div>Volume: {stocks.volume}</div></div>
             
             <fieldset>
                 <div className="form-group">
@@ -80,7 +80,7 @@ export const StockForm = () => {
                         } />
                 </div>
             </fieldset>
-            <button className="btn btn-primary" onClick={submitForm}>
+            <button className="btn btn-primary stockform--button" onClick={submitForm}>
                 Submit Form
             </button>
         </form>

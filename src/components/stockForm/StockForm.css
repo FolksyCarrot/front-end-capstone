@@ -6,9 +6,24 @@
 .stockform--image {
     height: 300px;
     width: 800px;
+    margin-left: 40px;
     
 }
 
 .stockForm {
+    margin-left: 0px;
+    background-color: black;
+    height: 1500px;
+}
+
+.form-group {
+    margin-left: 40px;
+}
+
+.stockform--info {
+    margin-left: 40px;
+}
+
+.stockform--button {
     margin-left: 40px;
 }
