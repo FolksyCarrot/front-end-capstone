@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react"
 import { useHistory } from "react-router-dom";
 import "./home.css"
 import stockHome from "../images/stock-home-page.jpg"
-import stockTicker from "../images/stockTicker1.gif"
+import stockTicker from "../images/stockTickerHome.gif"
 
 export const Home = () => {
 
@@ -47,25 +47,25 @@ export const Home = () => {
     return (
         <>
             <main className="main--container">
-               
-            <div className="home--heading"><h1 className="home--h1"> Soaring Stocks</h1></div>
-                <div className="home--picture"><img src={stockTicker} alt="picture" /></div>
+
+            <div className="home--picture"><img src={stockTicker} alt="picture" /></div>
+            <div className="home--heading"><h1 className="home--h1"> Home</h1></div>
                 <div className="search--container"><input className="home--search" placeholder="Search" onChange={
                     (event) => setSearch(event.target.value)
                 }></input>
                 <span className="material-icons instant-search">search</span></div>
            
                 <div className="stock--list">
-
+                   
                 {
                     stocks.map((stock) => {
-                        console.log(stock.open-stock.close)
+                        
                         return <div className={stock.open-stock.close> 0 ? "positive" : "negative" } key={stock.symbol}><h2>{stock.name}</h2><h3>Ticker: {stock.symbol}</h3> <h5>Open: {stock.open}</h5> <h5> Close: {stock.close}</h5> <h5>Volume: {stock.volume}</h5><h5>Change: {(stock.open -stock.close).toFixed(2)}</h5><button onClick={() => history.push(`/stockform/${stock.symbol}`)} >Add to watchlist</button></div>
                         
                     })
                 }
-
                 </div>
+                
             </main>
         
         </>
