@@ -56,18 +56,19 @@ export const EditForm = () => {
         <>
         <div className="stockForm--main">
         <form className="stockForm">
+        <div className="form--edit">
             <h1 className="stockForm__title">Stock Wishlist</h1>
             <h2>{watchlist.stockSymbol}</h2>
             <h4>Open: {watchlist.stockOpen}</h4>
             <h4>Close: {watchlist.stockClose}</h4>
             <h4>Volume: {watchlist.stockVolume}</h4>
             <fieldset>
-                <div className="form-group">
+                <div className="form-group-edit">
                     <label htmlFor="description">Notes:</label>
                     <textarea
                         required= {true} autoFocus={true}
                         type="text"
-                        className="form-control"
+                        className="form-control-edit"
                         defaultValue={watchlist.notes}
                         onChange= {
                             (event) => {
@@ -82,6 +83,7 @@ export const EditForm = () => {
             <button className="btn btn-primary" onClick={submitForm}>
                 Submit Form
             </button>
+            </div>
         </form>
         </div>
         </>

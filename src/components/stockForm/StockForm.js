@@ -68,7 +68,7 @@ export const StockForm = () => {
                     <textarea
                         required= {true} autoFocus={true}
                         type="text"
-                        className="form-control"
+                        className="form-control-stock"
                         placeholder="Notes of Stock"
                         onChange= {
                             (event) => {
