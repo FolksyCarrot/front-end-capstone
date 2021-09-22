@@ -3,10 +3,10 @@
     
 }
 .login--body {
-    background-image: url("../images/Soaring\ Stocks.png");
+    background-color: black;
     background-size: cover;
     height: 881px;
-    width: 1035px;
+    width: 2000px;
 }
 
 label {
@@ -54,6 +54,10 @@ fieldset {
 
 .container--login {
     text-align: center;
+    background-image: url("../images/Soaring\ stocks2.png");
+    background-size: cover;
+    height: 881px;
+    width: 865px;
 }
 
 .form--login {

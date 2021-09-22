@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 import "./NavBar.css"
-import stockSymbol from "../images/Soaring Stocks.png"
+import stockSymbol from "../images/soaring stocks navbar.png"
 
 
 export const NavBar = (props) => {

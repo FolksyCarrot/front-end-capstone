@@ -36,7 +36,7 @@
   }
 
   .positive:hover {
-      background-color: green;
+      background-color: rgb(7, 206, 7);
   }
 
   .negative:hover {

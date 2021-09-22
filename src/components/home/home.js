@@ -2,7 +2,7 @@ import React, { useEffect, useState} from "react"
 import { useHistory } from "react-router-dom";
 import "./home.css"
 import stockHome from "../images/stock-home-page.jpg"
-
+import stockTicker from "../images/stockTicker1.gif"
 
 export const Home = () => {
 
@@ -49,7 +49,7 @@ export const Home = () => {
             <main className="main--container">
                
             <div className="home--heading"><h1 className="home--h1"> Soaring Stocks</h1></div>
-                <div className="home--picture"><img src={stockHome} alt="picture" /></div>
+                <div className="home--picture"><img src={stockTicker} alt="picture" /></div>
                 <div className="search--container"><input className="home--search" placeholder="Search" onChange={
                     (event) => setSearch(event.target.value)
                 }></input>
