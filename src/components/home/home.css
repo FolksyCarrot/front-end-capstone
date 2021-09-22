@@ -49,14 +49,15 @@
   }
 
  .home--picture img {
-     height: 400px;
+     height: 3.7rem;
      width: 100vw;
  }
 
  .main--container {
      background-color: black;
-     /* background-image: url("../images/background2.png"); */
      background-size: cover;
+    min-height: 100vh;
+    
  }
 
  .home--h1 {
@@ -77,3 +78,4 @@
     margin-left: 1rem;
     margin-top: 10px;
 }
+

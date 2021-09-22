@@ -89,7 +89,7 @@ fieldset {
 .register--main {
     background-color: black;
     background-size: cover;
-    height: 881px;
+    height: 100vw;
 }
 
 .form--heading {
