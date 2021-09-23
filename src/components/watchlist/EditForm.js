@@ -55,7 +55,7 @@ export const EditForm = () => {
     return (
         <>
         <div className="stockForm--main">
-        <form className="stockForm">
+        <form className="stockForm--editform">
         <div className="form--edit">
             <h1 className="stockForm__title">Stock Wishlist</h1>
             <h2>{watchlist.stockSymbol}</h2>
