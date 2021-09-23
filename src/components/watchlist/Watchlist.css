@@ -30,9 +30,11 @@
 .watchlist--main {
     background-color: black;
 }
-.stockForm {
+.stockForm--editform {
+    margin-left: 0px;
     background-color: black;
-    color: white;
+    height: 100vw;
+    color:white;
 }
 
 .stockForm--main {
