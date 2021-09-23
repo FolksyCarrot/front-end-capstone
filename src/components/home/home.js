@@ -49,11 +49,22 @@ export const Home = () => {
             <main className="main--container">
 
             <div className="home--picture"><img src={stockTicker} alt="picture" /></div>
+
             <div className="home--heading"><h1 className="home--h1"> Home</h1></div>
                 <div className="search--container"><input className="home--search" placeholder="Search" onChange={
                     (event) => setSearch(event.target.value)
                 }></input>
                 <span className="material-icons instant-search">search</span></div>
+
+            <div className="home-section">
+
+            {/* <div className="home--heading"><h1 className="home--h1"> Home</h1></div>
+                <div className="search--container"><input className="home--search" placeholder="Search" onChange={
+                    (event) => setSearch(event.target.value)
+                }></input>
+                <span className="material-icons instant-search">search</span></div> */}
+
+                <div><img className="test--image" src={stockHome} /></div>
            
                 <div className="stock--list">
                    
@@ -65,7 +76,10 @@ export const Home = () => {
                     })
                 }
                 </div>
-                
+
+                </div>
+
+            <footer className="home--footer">words</footer>
             </main>
         
         </>
