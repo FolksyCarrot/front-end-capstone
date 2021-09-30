@@ -13,8 +13,9 @@
 }
 
 .navbar__main {
-    background-color: rgb(155, 155, 155);
+    background: linear-gradient(1deg,rgb(155, 155, 155), black);
     height: 40px;
+    
 }
 
 .navbar__image {
