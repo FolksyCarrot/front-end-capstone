@@ -10,7 +10,7 @@ export const Home = () => {
     const [search, setSearch] = useState("")
     const history = useHistory()
     const reRender = () => {
-        return fetch ("http://localhost:8088/data")
+        return fetch ("https://soaring-stock-api.herokuapp.com/data")
             .then ( res => res.json())
             .then ((data)=> {
                 setStocks(data)
@@ -28,7 +28,7 @@ export const Home = () => {
     )
 
     const searchRender = () => {
-        return fetch (`http://localhost:8088/data?name_like=${search}`)
+        return fetch (`https://soaring-stock-api.herokuapp.com/data?name_like=${search}`)
             .then ( res => res.json())
             .then ((data)=> {
                 setStocks(data)

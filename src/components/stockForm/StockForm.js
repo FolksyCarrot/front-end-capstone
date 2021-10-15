@@ -10,7 +10,7 @@ export const StockForm = () => {
     const {symbol} = useParams()
 
     const reRender = () => {
-        fetch (`http://localhost:8088/data?symbol=${symbol}`)
+        fetch (`https://soaring-stock-api.herokuapp.com/data?symbol=${symbol}`)
             .then ( res => res.json())
             .then ((data)=> {
                 setStocks(data[0])
@@ -49,7 +49,7 @@ export const StockForm = () => {
             body: JSON.stringify(stockObject)
         }
         
-        return fetch("http://localhost:8088/watchlist", fetchOption)
+        return fetch("https://soaring-stock-api.herokuapp.com/watchlist", fetchOption)
             .then(() => history.push("/home"))
     }
     

@@ -10,7 +10,7 @@ export const EditForm = () => {
     const {watchlistId} = useParams()
 
     const reRender = () => {
-       return fetch (`http://localhost:8088/watchlist/${watchlistId}`)
+       return fetch (`https://soaring-stock-api.herokuapp.com/watchlist/${watchlistId}`)
             .then ( res => res.json())
             .then ((data)=> {
                 setWatchlist(data)
@@ -41,7 +41,7 @@ export const EditForm = () => {
         }
     
 
-       fetch(`http://localhost:8088/watchlist/${watchlistId}`,  {
+       fetch(`https://soaring-stock-api.herokuapp.com/watchlist/${watchlistId}`,  {
            method: "PUT",
            headers: {
                "Content-Type": "application/json"
