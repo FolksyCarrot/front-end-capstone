@@ -9,7 +9,7 @@ export const Register = (props) => {
     const history = useHistory()
 
     const existingUserCheck = () => {
-        return fetch(`http://localhost:8088/users?email=${customer.email}`)
+        return fetch(`https://soaring-stock-api.herokuapp.com/users?email=${customer.email}`)
             .then(res => res.json())
             .then(user => !!user.length)
     }
@@ -18,7 +18,7 @@ export const Register = (props) => {
         existingUserCheck()
             .then((userExists) => {
                 if (!userExists) {
-                    fetch("http://localhost:8088/users", {
+                    fetch("https://soaring-stock-api.herokuapp.com/users", {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json"

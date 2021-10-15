@@ -11,7 +11,7 @@ export const Watchlist = () => {
 
     useEffect( 
         () => {
-            fetch(`http://localhost:8088/watchlist?userId=${user}`)
+            fetch(`https://soaring-stock-api.herokuapp.com/watchlist?userId=${user}`)
         .then(res => res.json())
         .then((data) => {
             setList(data)
@@ -22,11 +22,11 @@ export const Watchlist = () => {
 
     const deleteListItem = (event, id) => {
     event.preventDefault()
-        return fetch(`http://localhost:8088/watchlist/${id}`, {
+        return fetch(`https://soaring-stock-api.herokuapp.com/watchlist/${id}`, {
             method: "DELETE"
         }) 
         .then(() => {
-            return fetch(`http://localhost:8088/watchlist?userId=${user}`)
+            return fetch(`https://soaring-stock-api.herokuapp.com/watchlist?userId=${user}`)
             .then(res => res.json())
             .then((data) => {
                 setList(data)
